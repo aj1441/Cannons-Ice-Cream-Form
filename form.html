@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>From Introduction</title>
+</head>
+<body>
+    <h1>Fill out the form to place your ice cream order!</h1>
+    <form action="" method="get" id="form">
+		<div class="form-data">
+			<div class="customer-info">
+				<p class="required">*required</p>
+				<div class="input-wrapper">
+					<label for="name">Name*</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div class="input-wrapper">
+					<label for="email">Email*</label>
+					<input type="email" id="mail" name="email" required>
+				</div>
+				<div class="input-wrapper">
+					<label for="phone">Phone*</label>
+					<input type="tel" id="phone" name="phone" placeholder="123-123-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+				</div>
+			</div>
+			<div class="choose-flavor">
+				<label for="flavor">Ice cream Flavor</label>
+				<select id="flavor" name="choose_flav">
+					<option value="choose_option" disabled selected hidden>Please choose an option</option>
+					<option value="pecan_praline">Peacan Praline</option>
+					<option value="chocolate_marshmallow">Chocolate Marshmallow</option>
+					<option value="mint_chip">Mint Chip</option>
+				</select>
+			</div>
+			<div class="service-option">
+				<label>Cup or cone?</label>
+				<!-- for radial button the "for" from the label and the "id" in the input should matach
+for everything else the "for" and the "name"-->
+				<div class="select_cone">
+					<input type="radio" id="cone" value="cone" name="service_choice">
+					<label for="cone" class="service">Cone</label>
+				</div>
+				<div class="select_cup">
+					<input type="radio" id="cup" value="cup" name="service_choice">
+					<label for="cup" class="service">Cup</label>
+				</div>
+			</div>
+			<div class="optional">
+				<label> What Toppings would you like?</label>
+				<div class="add_sprinkle">
+					<input type="checkbox" id="sprinkles" value="want_sprinkles" name="add-sprinkles">
+					<label class="light" for="sprinkles">Sprinkles</label>
+				</div>
+				<div class="add_fruit">
+					<input type="checkbox" id="fruit" value="want_fruit" name="add-fruit">
+					<label class="light" for="fruit">Fruit</label>
+				</div>
+				<div class="add_chocolate">
+					<input type="checkbox" id="chocolate" value="want_chocolate" name="add-chocolate">
+					<label class="light" for="chocolate">Chocolate</label>
+				</div>
+			</div>
+			<div class="button">
+				<button id="submit">Place Order</button>
+			</div>
+		</div>
+	</form>
+    <script src="js/node.js"></script>
+</body>
+</html>
