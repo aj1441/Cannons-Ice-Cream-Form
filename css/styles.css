@@ -36,6 +36,10 @@ form {
 	padding-top: 0.5rem;
 }
 
+input {
+	border: none;
+}
+
 .form-data {
 	margin: 1rem;
 }
